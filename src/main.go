@@ -27,6 +27,6 @@ func about(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	http.HandleFunc("/about", handler)
-	http.ListenAndServe(":80", nil)
+	http.HandleFunc("/about", about)
+	http.ListenAndServe(":8000", nil)
 }
